@@ -4,9 +4,16 @@ import routes from "./routes.jsx"
 
 
 export const App = () =>{
+
+  let element = useRoutes(routes)
+
   return (
     <>
-    
+    {element}
+    <Toaster
+    position="bottom-right"
+    reverseOrder= {false}
+    />
     </>
   )
 }
