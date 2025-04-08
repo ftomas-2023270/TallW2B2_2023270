@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Logo } from "./Logo";
 import {Input} from './Input';
 import{
-    validateEmailMessage,
+    emailValidationMessage,
     validateEmail,
     validatePassword,
     validatePasswordMessage
@@ -77,7 +77,7 @@ export const Login = ({switchAuthHandler}) => {
                     type='text'
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.email.showError}
-                    validationMessage={validateEmailMessage}
+                    validationMessage={emailValidationMessage}
                 />
                 <Input 
                     field="password"
