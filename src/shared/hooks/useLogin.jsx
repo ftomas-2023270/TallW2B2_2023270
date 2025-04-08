@@ -25,6 +25,13 @@ export const useLogin = ()=>{
 
         const {userDetails}= response.data
 
-        localStorage.setItem('user',JSON.stringify(userDetails))
+        localStorage.setItem('user',JSON.stringify(userDetails));
+        
+        navigate('/')
+    }
+
+    return {
+        login,
+        isLoading,
     }
 }

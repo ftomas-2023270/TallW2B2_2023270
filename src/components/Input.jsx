@@ -10,7 +10,7 @@ export const Input = ({
     textArea
 }) => {
     const handleValueChange = (event) => {
-        onChangeHandler(event.target.value)
+        onChangeHandler(event.target.value, field)
     }
  
     const handleInputBlur = (event) => {
@@ -24,21 +24,21 @@ export const Input = ({
             </div>
             <div>
                 {textArea ? (
-                    <textArea>
+                    <textArea
                         type = {type}
                         value = {value}
                         onChange = {handleValueChange}
                         onBlur = {handleInputBlur}
                         rows = {5}
                         style = {{ maxWidth : '400px'}}
-                     </textArea>
+                     />
                 ) : (
-                    <input>
-                        ype = {type}
+                    <input
+                        type = {type}
                         value = {value}
                         onChange = {handleValueChange}
                         onBlur = {handleInputBlur}
-                    </input>
+                    />
                 )}
                 <span className= "auth-form-validation-message">
                     {showErrorMessage && validationMessage}

@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Logo } from "./Logo";
 import {Input} from './Input';
 import{
-    emailValidationMessage,
+    validateEmailMessage,
     validateEmail,
     validatePassword,
     validatePasswordMessage
@@ -69,24 +70,24 @@ export const Login = ({switchAuthHandler}) => {
             <Logo text={'Login Kinal Cast'}/>
             <form className="auth-form">
                 <Input 
-                field="email"
-                label="Email"
-                value={formState.email.value}
-                onChangeHandler={handleInputValueChange}
-                type='text'
-                onBlurHandler={handleInputValidationOnBlur}
-                showErrorMessage={formState.email.showError}
-                validationMessage={emailValidationMessage}
+                    field="email"
+                    label="Email"
+                    value={formState.email.value}
+                    onChangeHandler={handleInputValueChange}
+                    type='text'
+                    onBlurHandler={handleInputValidationOnBlur}
+                    showErrorMessage={formState.email.showError}
+                    validationMessage={validateEmailMessage}
                 />
                 <Input 
-                field="password"
-                label="Password"
-                value={formState.password.value}
-                onChangeHandler={handleInputValueChange}
-                type='text'
-                onBlurHandler={handleInputValidationOnBlur}
-                showErrorMessage={formState.password.showError}
-                validationMessage={validatePasswordMessage}
+                    field="password"
+                    label="Password"
+                    value={formState.password.value}
+                    onChangeHandler={handleInputValueChange}
+                    type='password'
+                    onBlurHandler={handleInputValidationOnBlur}
+                    showErrorMessage={formState.password.showError}
+                    validationMessage={validatePasswordMessage}
                 />
                 <button onClick={handleLogin} disabled={isSubmitButtonDisable}>
                     Log In
