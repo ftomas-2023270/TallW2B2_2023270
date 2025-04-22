@@ -42,7 +42,7 @@ export const useChangeSettings= () => {
 
     return ({
         isFetching: !channelSettings,
-        channelSettigns,
+        channelSettings,
         saveSettings
     })
 }

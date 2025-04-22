@@ -3,7 +3,7 @@ import {
     validatePassword,
     validatePasswordMessage
     
-} from '../shared/validators'
+} from '../../shared/validators'
 
 import { useChangePassword } from "../../shared/hooks";
 import { Input } from "../Input";

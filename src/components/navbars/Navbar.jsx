@@ -49,7 +49,7 @@ export const Navbar =()=>{
         <div className="nav-container">
             <NavLogo/>
             <div className="nav-buttons-container">
-                <NavButton text="Browse" onClickHandler={handleNavigateToChannelsPage}/>
+                <NavButton text="Explore" onClickHandler={handleNavigateToChannelsPage}/>
                 {!isLogged?(
                     <NavButton text="Login" onClickHandler={handleNavigateToAuthPage}/>
                 ) : (
