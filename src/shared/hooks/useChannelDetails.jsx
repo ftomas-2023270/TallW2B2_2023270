@@ -11,7 +11,7 @@ export const useChannelDetails = () => {
 
         if (responseData.error) {
             return toast.error(
-                responseData.e?.response?.data|| 'Error al cargar la informacio del canal'
+                responseData.e?.response?.data|| 'Error al cargar la informacion del canal'
             )
         }
  
